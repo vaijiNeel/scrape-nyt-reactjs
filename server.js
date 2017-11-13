@@ -9,7 +9,7 @@ const path = require("path");
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 } else {
-  app.use(express.static(__dirname + "/client/public"));
+  app.use(express.static(__dirname + ".\client\public"));
 }
 
 // Configure body parser for AJAX requests
