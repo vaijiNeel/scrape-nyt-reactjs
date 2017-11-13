@@ -73,7 +73,7 @@ class Main extends Component {
 	// search button click event handler
 	handleFormSubmit = (event) => {
 	    event.preventDefault();
-	    console.log("Getting NYT Articles");
+	    console.log("Input entered:");
 	    console.log("this.state.topic: ", this.state.topic);
 	    console.log("this.state.startYear: ", this.state.startYear);
 	    console.log("this.state.endYear: ", this.state.endYear);
@@ -86,8 +86,10 @@ class Main extends Component {
 
   	// save article button click event handler
   	handleSaveButton = (id) => {
+  		console.log("id param: ", id);
+  		console.log("state aritcles:", this.state.articles);
 	    const findArticleByID = this.state.articles.find((el) => el._id === id);
-	    console.log("findArticleByID: ", findArticleByID);
+	    console.log("Article found by ID: ", findArticleByID);
 	    const newSave = {title: findArticleByID.headline.main, date: findArticleByID.pub_date, url: findArticleByID.web_url};
 	    API.saveArticle(newSave)
 	    	.then(this.getSavedArticles());
