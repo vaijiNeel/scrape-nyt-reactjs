@@ -1,6 +1,6 @@
 import React from "react";
 
-const SavedArt = props => 
+const Saved = props => 
 	<div className="container">
     <li className="list-group-item">
       <h4>
@@ -13,6 +13,6 @@ const SavedArt = props =>
       </h4>
       <p>Date Published: {props.date}</p>
     </li>
-  </div>
+  </div>;
 
-export default SavedArt;
+export default Saved;

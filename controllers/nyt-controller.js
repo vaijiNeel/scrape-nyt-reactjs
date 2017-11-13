@@ -1,4 +1,4 @@
-var Article = require("../models/Article");
+var Article = require("../models/Articles");
 
 module.exports = {
   // this method handles finding all articles in the db

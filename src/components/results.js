@@ -13,6 +13,6 @@ const Results = props =>
       </h4>
       <p>Date Published: {props.date}</p>
     </li>
-  </div>
+  </div>;
 
 export default Results;

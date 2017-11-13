@@ -1,1 +1,1 @@
-# Scrape NYT using React JS
+NYT - React JS App

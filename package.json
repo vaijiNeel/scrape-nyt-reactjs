@@ -1,18 +1,16 @@
 {
-  "name": "nytreact",
+  "name": "scrape-nyt-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.17.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongoose": "^4.13.1",
-    "path": "^0.12.7",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
-    "react-router": "^4.2.0",
+    "react-scripts": "1.0.17",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10",
+    "axios": "^0.16.2"
   },
   "scripts": {
     "start": "react-scripts start",

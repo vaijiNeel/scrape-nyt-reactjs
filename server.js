@@ -2,14 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const path = require("path");
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, "client/build")) );
 } else {
-  app.use(express.static(__dirname + ".\client\public"));
+  app.use(express.static(path.join(__dirname, "client/public")) );
 }
 
 // Configure body parser for AJAX requests
@@ -35,7 +35,7 @@ router.post("/api/saved", articlesController.insert);
 router.delete("/api/saved/:id", articlesController.delete);
 // Send every other request to the React app
 router.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 app.use(router);
 
