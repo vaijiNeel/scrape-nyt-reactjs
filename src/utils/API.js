@@ -10,14 +10,17 @@ const API = {
   },
   // Retrieves saved articles from the db
   getArticle: function() {
+    console.log("inside api js getArticle");
     return axios.get("/api/saved");
   },
   // Saves a new article to the db
   saveArticle: function(articleObj) {
+    console.log("inside api js saveArticle");
     return axios.post("/api/saved", articleObj);
   },
   // Deletes an article from the db
   deleteArticle: function(id) {
+    console.log("inside api js deleteArticle");
     return axios.delete(`/api/saved/${id}`);
   }
 };

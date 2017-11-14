@@ -4,7 +4,8 @@ module.exports = {
   // this method handles finding all articles in the db
   find: function(req, res) {
     console.log("get saved articles from the db");
-    Article.find().then(function(doc) {
+    Article.find()
+    .then(function(doc) {
       res.json(doc);
     }).catch(function(err) {
       res.json(err);
@@ -14,7 +15,8 @@ module.exports = {
   insert: function(req, res) {
     console.log("Add saved artice to the db");
     console.log("req.body: ", req.body);
-    Article.create(req.body).then(function(doc) {
+    Article.create(req.body)
+    .then(function(doc) {
       res.json(doc);
       console.log("doc: ", doc);
     }).catch(function(err) {

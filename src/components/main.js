@@ -25,7 +25,6 @@ class Main extends Component {
 	    });
 	}
 
-	// method to render search results
 	renderArticles = () => {
 	    return this.state.articles.map(article => (
 	      <Results
@@ -40,7 +39,6 @@ class Main extends Component {
 	    ));
 	  }
 
-	// method to render saved articles
 	renderSaved = () => {
 	    return this.state.saved.map(save => (
 	      <Saved
@@ -104,7 +102,6 @@ class Main extends Component {
 	render() {
     	return (
     		<div>
-    			{/*Test*/}
     			<div className="jumbotron">
 		            <h1 className="text-center"><strong>New York Times Article Search</strong></h1>
 		            <h2 className="text-center">Search for and save articles of interest.</h2>

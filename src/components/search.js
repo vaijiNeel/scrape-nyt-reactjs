@@ -36,7 +36,6 @@ const Search = props =>
       </div>
     </div>
     <br/><br/>
-    {/*Test from search*/}
   </div>;
 
 

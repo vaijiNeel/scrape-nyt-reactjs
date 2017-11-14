@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const path = require("path");
 
 // Serve up static assets
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 // Add routes, both API and view
-var articlesController = require("./controllers/scrapeController");
+var articlesController = require("./controllers/nyt-controller");
 var router = new express.Router();
 // Get saved articles
 router.get("/api/saved", articlesController.find);
