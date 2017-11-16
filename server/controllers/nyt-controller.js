@@ -6,6 +6,7 @@ module.exports = {
     console.log("get saved articles from the db");
     Article.find()
     .then(function(doc) {
+      console.log("found articles doc: ", doc);
       res.json(doc);
     }).catch(function(err) {
       res.json(err);
@@ -18,7 +19,7 @@ module.exports = {
     Article.create(req.body)
     .then(function(doc) {
       res.json(doc);
-      console.log("doc: ", doc);
+      console.log("saved article - doc: ", doc);
     }).catch(function(err) {
       res.json(err);
     });
@@ -29,6 +30,7 @@ module.exports = {
     Article.remove({
       _id: req.params.id
     }).then(function(doc) {
+      console.log("deleted article - doc: ", doc);
       res.json(doc);
       console.log("doc: ", doc);
     }).catch(function(err) {

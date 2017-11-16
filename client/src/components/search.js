@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 const Search = props => 
   
@@ -7,18 +8,19 @@ const Search = props =>
       <div>
         <h3 ><strong>Search</strong></h3>
       </div>
+      <br/>
       <div>
         <form>
           <span>
-            Topic: 
+            <strong>Topic </strong>
             <input onChange={props.handleTopicChange} type="text" className="form-control" id="topic"/>
           </span> <br/>
           <span>
-            Start Year: 
+            <strong>Start Year </strong>
             <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-year" />
           </span> <br/>
           <span>
-            End Year: 
+            <strong>End Year </strong>
             <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-year" />
           </span> <br/>
           <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
@@ -28,7 +30,7 @@ const Search = props =>
     </div>
     <br/> <br/>  
     <div className="resultDiv" >
-      <div>
+      <div className="resultDivHdr">
         <h3><strong>Results</strong></h3>
       </div>
       <div>

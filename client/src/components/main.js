@@ -101,8 +101,8 @@ class Main extends Component {
 
 	render() {
     	return (
-    		<div>
-    			<div className="jumbotron">
+    		<div className="container">
+    			<div className="jumbotron MainHdr">
 		            <h1 className="text-center"><strong>New York Times Article Search</strong></h1>
 		            <h2 className="text-center">Search for and save articles of interest.</h2>
 		        </div>
@@ -115,7 +115,7 @@ class Main extends Component {
 		        />
 		        {/*<Search/>*/}
 		        <div>
-		        	<h3 className="panel-title">
+		        	<h3 className="panel-title savedHdr">
               			<strong>Saved Articles</strong>
             		</h3>
             		<div>
