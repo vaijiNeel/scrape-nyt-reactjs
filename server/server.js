@@ -8,8 +8,10 @@ const PORT = process.env.PORT || 3001;
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")) );
+  console.log("inside production static path");
 } else {
   app.use(express.static(path.join(__dirname, "../client/public")) );
+  console.log("inside non-production static path");
 }
 
 // Configure body parser for AJAX requests
